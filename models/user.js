@@ -36,7 +36,7 @@ const userSchema = new mongoose.Schema({
         max: 255
     },
     phone: {
-        type: Number,
+        type: String,
         required: true,
         unique: true,
         // min: 10,

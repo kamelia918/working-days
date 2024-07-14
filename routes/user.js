@@ -48,6 +48,15 @@ router.get('/me', auth, async (req, res) => {
     res.send(user);
 });
 
+// Route to get all workdays for the logged-in user
+router.get('/workdays', auth, async (req, res) => {
+    try {
+        const user = await User.findById(req.user._id);
+        res.json(user.workdays);
+    } catch (error) {
+        res.status(500).send(error.message);
+    }
+});
 
 // Route pour enregistrer les heures de travail
 router.post('/workdays', auth, async (req, res) => {

@@ -18,7 +18,7 @@
                     </a>
                     <span>Venu staff portal</span>
                 </div>
-                <span>Heloo username</span>
+                <span id="usernameDisplay">Hello username</span>
             </div>
             <div id="down">
                 
@@ -33,6 +33,34 @@
             </div>
         </div>
     </nav>
+
+
+    <section>
+        <button id="addWorkDayBtn">Add Work Day</button>
+        
+        <ul id="workDaysList"></ul>
+    </section>
+
+    <!-- Form to add work day (initially hidden) -->
+    <div id="workDayForm" style="display: none;">
+        <form id="addWorkDayForm">
+            <label for="Type of test">Type of test:</label>
+            <select id="Typeoftest" name="Type of test" required>
+                <option value="UKVI">UKVI</option>
+                <option value="lifeSkills">Life Skills</option>
+                <option value="IELTS">IELTS</option>
+                <option value="sharedCost">Shared Cost</option>
+            </select>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+            <label for="startTime">Start Time:</label>
+            <input type="time" id="startTime" name="startTime" required>
+            <label for="endTime">End Time:</label>
+            <input type="time" id="endTime" name="endTime" required>
+            <button type="submit">Add</button>
+        </form>
+    </div>
+
 
     <footer id="body-footer"> 
         <div>
@@ -51,5 +79,6 @@
             <div > © 2016 British Council <div class="version-info"> <b>Api version</b> 2024.5.8.2234 | <b>Client version</b> 2024.5.8.2234-EP-13838 </div> </div> </div> <script>if(-1==window.location.host.indexOf("britishcouncil.org")){var buttons=document.getElementsByClassName("ot-sdk-show-settings");buttons&&(buttons[0].style.display="none")}</script> 
         </div>
         </footer>
+    <script src="../scripts/script.js"></script>
 </body>
 </html>
